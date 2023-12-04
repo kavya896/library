@@ -12,9 +12,7 @@ app.use(express.urlencoded({limit:'50mb',extended:true}))
 app.use("/",router)
 app.use("/note",note)
 
-// mongoose.connect("mongodb+srv://kavyareddy:kavyareddy@cluster0.msabz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority").then(
-//     ()=>{console.log("connection succeessfull")}
-// )
+
 mongoose.connect(process.env.DATA_BASE).then(
     ()=>{
         console.log("connection successful")
